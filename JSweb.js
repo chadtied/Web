@@ -1,4 +1,4 @@
-import data from "./taiwan.json" assert{type: "json"};
+import data from "./taiwain.json" assert{type: "json"};
 
 var Company = [];
 var Id = [];
@@ -12,7 +12,7 @@ function autocomplete(inp, arrCompany, arrId) {
     var currentFocus;
     /*execute a function when someone writes in the text field:*/
     inp.addEventListener("input", function(e) {
-        var a, b, i, val = this.value;
+        var a, b, i,val = this.value;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
         if (!val) { return false;}
@@ -38,6 +38,7 @@ function autocomplete(inp, arrCompany, arrId) {
             b.addEventListener("click", function(e) {
                 /*insert the value for the autocomplete text field:*/
                 inp.value = this.getElementsByTagName("input")[0].value;
+                //inp= this.getElementsByTagName("input");
                 /*close the list of autocompleted values,
                 (or any other open lists of autocompleted values:*/
                 closeAllLists();
@@ -102,5 +103,10 @@ function autocomplete(inp, arrCompany, arrId) {
         closeAllLists(e.target);
     });
   }
-  autocomplete(document.getElementById("search"), Company, Id); 
+
+  var row= document.getElementsByName("company");
+
+  for(var i= 0; i< row.length; i++){
+    autocomplete(row[i], Company, Id);
+  }
   
