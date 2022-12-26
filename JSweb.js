@@ -1,4 +1,4 @@
-import data from "./taiwain.json" assert{type: "json"};
+import data from "./taiwan.json" assert{type: "json"};
 
 var Company = [];
 var Id = [];
