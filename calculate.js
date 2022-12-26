@@ -1,11 +1,11 @@
 var input_block= document.getElementsByTagName('input');
 var btn= document.getElementsByClassName('button')[0];
 //var msg = require('./test.js');
-var list= 0;
-var Sum= 100;
-var average= 0;
 
 btn.addEventListener("click", function(){
+  var list= 0;
+  var Sum= 100;
+  var average= 0;
   for(var i= 3; i< input_block.length; i+= 2){
     if(input_block[i].value!= "" && input_block[i-1].value!= ""){
       Sum-= Number(input_block[i].value);
