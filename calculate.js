@@ -21,7 +21,7 @@ btn.addEventListener("click", function(){
     if(input_block[i].value== ""&& input_block[i-1].value!= ""){
       input_block[i].value= average.toString();
     }
-    if(i== input_block.length-1&& list>= 0)
+    if(i== input_block.length-1&& list> 0)
         input_block[i].value= "100.0";
 }
 })
