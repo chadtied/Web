@@ -8,7 +8,6 @@ btn.addEventListener("click", function(){
   var Sum= 100;
   var average= 0;
   for(var i= 3; i< input_block.length; i+= 2){
-    console.log(Sum,list);
     if(input_block[i-1].value!= ""){
       Sum-= Number(input_block[i].value);
     }
