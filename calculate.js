@@ -17,7 +17,7 @@ btn.addEventListener("click", function(){
           null_list++;
     }
   }
-  if(list> 0){
+  if(list> 0&& ){
     average= Math.round((Sum/null_list)*100)/100;
   }
   for(var i= 3; i< input_block.length; i+= 2){
