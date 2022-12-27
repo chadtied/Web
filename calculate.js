@@ -4,18 +4,22 @@ var btn= document.getElementsByClassName('button')[0];
 
 btn.addEventListener("click", function(){
   var list= 0;
+  var null_list= 0;
   var Sum= 100;
   var average= 0;
   for(var i= 3; i< input_block.length; i+= 2){
-    if(input_block[i].value!= "" && input_block[i-1].value!= ""){
+    console.log(Sum,list);
+    if(input_block[i-1].value!= ""){
       Sum-= Number(input_block[i].value);
     }
-    else if(i!= input_block.length-1 && input_block[i-1].value!= ""){
+    if(i!= input_block.length-1 && input_block[i-1].value!= ""){
         list++;
+        if(input_block[i].value== "")
+          null_list++;
     }
   }
   if(list> 0){
-    average= Math.round((Sum/list)*100)/100;
+    average= Math.round((Sum/null_list)*100)/100;
   }
   for(var i= 3; i< input_block.length; i+= 2){
     if(input_block[i].value== ""&& input_block[i-1].value!= ""){
